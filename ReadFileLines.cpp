@@ -23,7 +23,7 @@ using namespace std;
 int main(int argc, char **argv){
 
 // Input Validation
-	if(argc != 1){
+	if(argc != 2){
 		cout << "READFILELINES.CPP_ERROR: EXPECTED 1 ARG" << endl;
 	}else{
 		
@@ -31,7 +31,7 @@ int main(int argc, char **argv){
 		// SPACE SEPERATED
 		// TODO: Make sure you don't have to remove the newline
 		//       character from the file path.
-		ifstream file(argv[0]);
+		ifstream file(argv[1]);
 
 		string line;
 
