@@ -22,18 +22,28 @@
 #=========================================================================
 declare -r TB_DIR_ID=$((date -rfc-2822))
 declare -r SOURCES_DEST='./docsfrontpage/source/'
-# If no files are put into this dir, then it is deleted at the end script.
-# TODO: Make sure you actually do that tho.
-mkdir "./${TB_DIR_ID}_RMHDP_OUT"
+declare -r OUTPUT_DIR="./${TB_DIR_ID}_RMHPDF_OUT"
+declare -r TMP_DAT_PATH="./${TB_DIR_ID}_RMHPDF_OUT/.rmhpd"
 
+# If no files are put into this dir, then it is deleted at the end script.
+# Puting a temp file to print file paths to
+# TODO: Make sure you actually do that tho.
+mkdir "$OUTPUT_DIR"
+touch "$TMP_DAT_PATH"
 #=========================================================================
+
+
 
 # Print the name of each file found to standard out in parallel and 
 # copy them into the ./docsfrontpage/source directory.
+# TODO: MAKE SURE TO DELETE TMP_DAT FILE
 #=========================================================================
-cp $((find "$1" -type f -name "*.aadoc")) ${SORUCES_DEST} &
-cp $((find "$1" -type f -name "*.wiki")) ${SORUCES_DEST} &
-cp $((find "$1" -type f -name "*.adoc")) ${SORUCES_DEST} &
+find "$1" -type f -name "*.aadoc" >> "$TMP_DAT_PATH"
+find "$1" -type f -name "*.wiki" >> "$TMP_DAT_PATH"
+find "$1" -type f -name "*.adoc" >> "$TMP_DAT_PATH"
+
+# Taking every line of output and putting into an array called targets
+#=========================================================================
 
 
 
