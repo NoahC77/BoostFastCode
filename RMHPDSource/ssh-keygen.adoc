@@ -1,0 +1,4 @@
+# generate an RSA ssh key with 4096 bits
+ssh-keygen -t rsa -b 4096
+# generate an EdDSA ssh key with 100 KDF (key derivation function) rounds
+ssh-keygen -t ed25519 -a 100

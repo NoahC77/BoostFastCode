@@ -1,0 +1,52 @@
+= DevDocs Plans & Philosophy
+:author:	Noah Castetter
+:email:		nbc1700001@utdallas.edu
+:revdate:	May 4, 1999
+:revnumber:	.01
+
+// TODO: put this into Makefile
+// asciidoc -a revdate=(current date here) (file name here)
+// asciidoc -a revdate=2004/07/27 SimmonsPlanPDFNotes.txt
+
+== Overview
+
+DevDocs is going to treet our documentation as a software project, enabling continuous integration and deployment of documenation. This same framework will then also be used to develop educational content aswell as a platform for reasearch documentation. Finally, this framework is suitable for developing simulation campaign status reporting footnote:[Campaign Simulation Status Reporting - A manner through which a team can keep track of goals set, progress torwards each goal, and relevant properties pertaining to formerly mentioned goals] through Wiki-based or HTML5 output, lowering the barrier of entry for faculty lacking CI skills to collaborate with their students. 
+
+== Workflow
+
+.Benefits of using the Asciidoc markup language
+* Will be used as the toolchain to process Asciidoc sources.
+* Can be Makefile driven within local builds for testing.
+* Convienent Chrome and Firefox plugins which provide real time markup rendering.
+
+.Two options for the backend Git Repo
+|================================================================================================================================================================
+|*Gitlab Pages Repo*									|*Gitlab Wiki Repo*	 
+|Makefile compatible to generate html quickly						|Asciidoc can replace Gitlab's default markup wiki format
+|Static site generator available for openeing up new features when calling asciidoctor	|Technical users can use git + text editor
+|Gatsby.js and Hugo will be explored							|Gitlab Wiki's intuitive built-in editor accesible to non-technical users
+|================================================================================================================================================================
+
+Asciidoc sources will be commited to Git, which is hosted on Gitlab at AWS. Documentation sources will be built on checkin using Gitlab's CI/CD system. These built sites can be delievered as any number of the following.
+
+.Built sites can be delivered as:
+* Gitlab Pages Website
+* Gitlab wiki page
+* Static sites served via any web server
+
+== Additional Thoughts
+
+=== Sparkle Share
+
+Providing up to date and syncronized Asciidoc documentation, Sparkle share is another great integration point. Being fairly accessible, non-technical users may simply edit a local laptop/desktop cloud store provided by sparkleshare footnote:[Software designed to handle situations where project files are often changing, tracking files edited by multiple people, version controlling files, and encrypting files on the server to prevent spying.] Once saved, the .adoc will be sent directly into the gitlab build chain. However, the largest drawback of implementing this feature is that it doesn't keep the meta data associated with the git commit, more specifically the time and user is tracked, however there is no tracking of git commit messages.
+
+.Other thoughts
+* Additional integrations can be done to distribute documentation to Box shares via the box cli tools
+* Asciidoctor sources can also be used to generate latex and man pages
+* Teams integration
+* Explored as a research communication platform
+* Explored as a reproducibility tool
+* Explored as an educational platform to deliver self taught education
+* Slide decks can be prepared from the same asciidoctor markup using react.js footnote:[React.js allows the generation of 2-dimensional slide decks (support left right and up down navigation). This facilitates compelling reference documentation/ Quickstart where the user controls the level of detail along the y axis while the subject matter is controlled along the x acis. All of this is html5 and is responsive. Works very well on all platforms including mobile.]
+
+
