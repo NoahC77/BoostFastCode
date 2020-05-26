@@ -23,9 +23,7 @@
 
 declare -r ERR_MISSING_SOURCE="ERROR: MISSING SOURCE FILE PATH CMD ARG. Try dochead source"
 declare -r ERR_INVALID_EXTENSION="ERROR: INVALID FILE EXTENSION ON THE FIRST ARGUMENT PASSED"
-declare -r LINE_FILE_PATH="./lineFile.txt"
 declare -r SHELL_HEADER_FILE_PATH="./docheaders/shellheader.txt"
-declare -r CPP_HEADER_FILE_PATH="./docheaders/cppheader.txt"
 
 # If the source arg isn't null, then we will see if it's extension is 
 # eligible for prepending through a switch statement
@@ -42,21 +40,19 @@ else
     # Switch depending on the extension of the first arugment.
     case $extension in
 
-    cpp)
-        echo -e "$(cat ${CPP_HEADER_FILE_PATH})$(cat ${LINE_FILE_PATH})$(cat $1)" > "$1"
-    ;;
+	sh)
+	    cat ${SHELL_HEADER_FILE_PATH} > $1
+	    exit
+	;;
 
-    sh)
-        echo -e "$(cat ${SHELL_HEADER_FILE_PATH})$(cat ${LINE_FILE_PATH})$(cat $1)" > "$1"
-    ;;
+	*)
+	    echo "$ERR_INVALID_EXTENSION"
+	    exit
+	;;
 
-    *)
-        echo "$ERR_INVALID_EXTENSION"
-    ;;
     esac
 
 fi
-
 # =========================================================================
 
 

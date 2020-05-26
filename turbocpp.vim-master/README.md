@@ -1,2 +1,0 @@
-# turbocpp.vim
-vim colorscheme
