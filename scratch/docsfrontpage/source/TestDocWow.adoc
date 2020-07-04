@@ -1,0 +1,32 @@
+:toc2:
+
+= OIT HPC Docs
+:stylesdir: assets/
+:stylesheet: adoc-github.css
+
+== eCAT (Redmine)
+link:http://oithpc.utdallas.edu/projects/researcher-support/wiki/How_to_eCAT[How to eCAT]
+
+== HPC Portal Research (Redmine)
+link:http://oithpc.utdallas.edu/projects/researcher-support/wiki/Ideas_for_the_UTD_HPC_Portal[Ideas for the UTD HPC Portal]
+
+== Meeting Notes (Redmine)
+link:http://oithpc.utdallas.edu/projects/researcher-support/wiki/Weekly_Meeting_Minutes[Weekly Meeting Minues from Oct 14, 2019 to Feb 13, 2020]
+
+== Misc IRL How To's (Redmine)
+link:http://oithpc.utdallas.edu/projects/researcher-support/wiki/NSERL_and_BSB_Access[NSERL and BSB Access Badge]
+
+== OHPC Prototyping and General Info (Redmine)
+link:http://oithpc.utdallas.edu/projects/researcher-support/wiki/The_OHPC_Software_Stack[Introduction to Lmod]
+
+link:http://oithpc.utdallas.edu/projects/researcher-support/wiki/OpenHPC_Prototyping_Using_VirtualBox[OpenHPC Prototyping Using VirtualBox]
+
+== Useful Dr.Simmon Emails (Redmine)
+link:http://oithpc.utdallas.edu/projects/researcher-support/wiki/Correcting_Ganymede's_Queue_based_on_a_User's_Job_Volume_instead_of_FIFO[Correcting Ganymede Queue using --nice]
+
+link:http://oithpc.utdallas.edu/projects/researcher-support/wiki/Trouble_Shooting_Cannot_load_default_config_file[Trouble Shootin "Cannot load default config file"]
+
+link:http://oithpc.utdallas.edu/projects/researcher-support/wiki/Working_with_HDF5[Working with HDF5]
+
+== UTDallas HPC Cluster Users Guide
+link:http://docs.oithpc.utdallas.edu/[Users Cluster Guide]
