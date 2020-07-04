@@ -15,6 +15,13 @@
 PATH=/usr/local/bin:/usr/bin:/bin:/usr/ccs/bin:/sbin:/usr/sbin:/usr/local/openwin/bin:/usr/openwin/bin
 MANPATH=/usr/local/man:/usr/man:/usr/share/man
 
+# Boost Fast Code
+ABS_DOCHEAD_PATH='C:/Users/Noah/2020SummerStuff/BoostFastCode/boosts/DocHead/dochead.sh'
+ABS_BOOST_VIM_PATH='C:/Users/Noah/2020SummerStuff/BoostFastCode/boosts/VimStuff/boost-vim.sh'
+
+alias dochead="$ABS_DOCHEAD_PATH"
+alias boost-vim="$ABS_BOOST_VIM_PATH
+
 export HOST=`uname -n`
 
 umask 066
