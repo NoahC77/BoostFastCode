@@ -8,7 +8,10 @@ META_DATA_FILE="/meta.dat"
 
 # Keeping a record of the .bashrc being replaced
 PREVIOUS_SHELL_RECORD="$(date +%s)"
+
 # cp "$SHELL/.bashrc" "$BFC_ROOT_DIR/shell-history/$(date +%s).bashrc"
 
-# Replacing .bashrc file located at $SHELL with boosted basrc
-# cp "$BFC_ROOT_DIR/.bashrc" "$SHELL/.bashrc"
+echo "Going to copy $SHELL/.bashrc into $BFC_ROOT_DIR/shell-history/$(date +%s).bashrc"
+
+# Yeah I did it
+SHELL="$BFC_ROOT_DIR"
