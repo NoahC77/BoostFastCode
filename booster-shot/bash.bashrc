@@ -15,6 +15,7 @@
 PATH=/usr/local/bin:/usr/bin:/bin:/usr/ccs/bin:/sbin:/usr/sbin:/usr/local/openwin/bin:/usr/openwin/bin
 MANPATH=/usr/local/man:/usr/man:/usr/share/man
 
+
 # Boost Fast Code
 ABS_DOCHEAD_PATH='C:/Users/Noah/2020SummerStuff/BoostFastCode/boosts/DocHead/dochead.sh'
 ABS_BOOST_VIM_PATH='C:/Users/Noah/2020SummerStuff/BoostFastCode/boosts/VimStuff/boost-vim.sh'
@@ -119,3 +120,10 @@ if [ -n "$PS1" ] ; then
 fi 	# Finish processing interactive shell functions
 
 # $Source: /warez/home/skel/src/RCS/.bashrc,v $
+
+# BoostFastCode Aliases
+alias ls="pwd; ls -a -ltr"
+alias dochead='/home/2020SummerStuff/BoostFastCode/boosts/DocHead/dochead.sh'
+alias boost-vim='/home/2020SummerStuff/BoostFastCode/boosts/VimStuff/boost-vim.sh'
+
+

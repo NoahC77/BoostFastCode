@@ -26,6 +26,8 @@ declare -r ERR_INVALID_EXTENSION="ERROR: INVALID FILE EXTENSION ON THE FIRST ARG
 declare -r LINE_FILE_PATH="./lineFile.txt"
 declare -r SHELL_HEADER_FILE_PATH="./docheaders/shellheader.txt"
 declare -r CPP_HEADER_FILE_PATH="./docheaders/cppheader.txt"
+declare -r ADOC_DOC_HEADER="./docheaders/adoc-docs-template.txt"
+declare -r ADOC_TABLE_HEADER="./docheaders/adoc-table-template.txt"
 
 # If the source arg isn't null, then we will see if it's extension is 
 # eligible for prepending through a switch statement
@@ -41,6 +43,22 @@ else
 
     # Switch depending on the extension of the first arugment.
     case $extension in
+
+    adoc)
+       
+	select headerType in ADOC_DOC_HEADER ADOC_TABLE_HEADER
+	do
+		case $headerType in 
+	          'ADOC_DOC_HEADER')
+        	      echo -e "$(cat ${ADOC_DOC_HEADER_TEMPLATE})$(cat ${LINE_FILE_PATH})$(cat $1)" > "$1"
+	   	      ;;
+
+		  'ADOC_TABLE_HEADER')
+          	      echo -e "$(cat ${ADOC_TABLE_HEADER})$(cat ${LINE_FILE_PATH})$(cat $1)" > "$1"
+		      ;;
+    		  esac
+	done
+    ;;
 
     cpp)
         echo -e "$(cat ${CPP_HEADER_FILE_PATH})$(cat ${LINE_FILE_PATH})$(cat $1)" > "$1"

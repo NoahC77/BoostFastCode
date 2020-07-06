@@ -9,12 +9,9 @@ META_DATA_FILE="/meta.dat"
 # Keeping a record of the .bashrc being replaced
 PREVIOUS_SHELL_RECORD="$(date +%s)"
 BFC_ROOT_DIR="$(pwd)"
-TARGET_BASH_PROFILE='/.bash_profile'
-sudo cp "$TARGET_BASH_PROFILE" "$BFC_ROOT_DIR/shell-history/$(date +%s).bash_profile"
+TARGET_BASH_RC='/etc/bash.bashrc'
+sudo cp "$TARGET_BASH_RC" "$BFC_ROOT_DIR/shell-history/$(date +%s).bash_profile"
 
-sudo echo "Going to copy $TARGET_BASH_PROFILE into $BFC_ROOT_DIR/shell-history/$(date +%s)$TARGET_BASH_PROFILE"S
-
-NEW_BASH_PROFILE="$BFC_ROOT_DIR/.bash_profile"
+NEW_BASH_PROFILE="$BFC_ROOT_DIR/bash.bashrc"
 # copt boost shot .bashrc into the system specified .bashrc path
-sudo echo "Going to copy $BFC_ROOT_DIR/.bash_profile into $TARGET_BASH_PROFILE "
-sudo cp "$NEW_BASH_PROFILE" "$TARGET_BASH_PROFILE"
+sudo cp "$NEW_BASH_PROFILE" "$TARGET_BASH_RC"
