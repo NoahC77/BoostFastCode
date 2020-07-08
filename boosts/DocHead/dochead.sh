@@ -23,11 +23,16 @@
 
 declare -r ERR_MISSING_SOURCE="ERROR: MISSING SOURCE FILE PATH CMD ARG. Try dochead source"
 declare -r ERR_INVALID_EXTENSION="ERROR: INVALID FILE EXTENSION ON THE FIRST ARGUMENT PASSED"
+DOCHEAD_ROOT_DIR=$(pwd)
+declare -r TMP_TARGET_FILE_PATH="./tmp.txt"
 declare -r LINE_FILE_PATH="./lineFile.txt"
 declare -r SHELL_HEADER_FILE_PATH="./docheaders/shellheader.txt"
 declare -r CPP_HEADER_FILE_PATH="./docheaders/cppheader.txt"
-declare -r ADOC_DOC_HEADER="./docheaders/adoc-docs-template.txt"
+declare -r ADOC_DOC_HEADER="./docheaders/adoc-doc-template.txt"
 declare -r ADOC_TABLE_HEADER="./docheaders/adoc-table-template.txt"
+
+sudo chmod 777 $1
+sudo chmod 777 $TMP_TARGET_FILE_PATH
 
 # If the source arg isn't null, then we will see if it's extension is 
 # eligible for prepending through a switch statement
@@ -41,7 +46,12 @@ else
     filename=$(basename -- "$1")
     extension="${filename##*.}"
 
-    # Switch depending on the extension of the first arugment.
+    # Copying contents of file path specified in first command line argument into temp file.
+    cp $1 $TMP_TARGET_FILE_PATH
+    
+
+    # Switch depending on the extension of the first argument.
+    # Overwrites and then appends header lines to now empty target file path
     case $extension in
 
     adoc)
@@ -49,23 +59,35 @@ else
 	select headerType in ADOC_DOC_HEADER ADOC_TABLE_HEADER
 	do
 		case $headerType in 
-	          'ADOC_DOC_HEADER')
-        	      echo -e "$(cat ${ADOC_DOC_HEADER_TEMPLATE})$(cat ${LINE_FILE_PATH})$(cat $1)" > "$1"
-	   	      ;;
 
-		  'ADOC_TABLE_HEADER')
-          	      echo -e "$(cat ${ADOC_TABLE_HEADER})$(cat ${LINE_FILE_PATH})$(cat $1)" > "$1"
+                  'ADOC_DOC_HEADER')
+		      cat $ADOC_DOC_HEADER > $1
+    		      cat $LINE_FILE_PATH >> $1
+		      cat $TMP_TARGET_FILE_PATH >> $1
+ 		      exit
+	   	      ;;
+                
+
+		  'ADOC_TABLE_HEADER') 
+  		      cat $ADOC_TABLE_HEADER > $1
+		      cat $LINE_FILE_PATH >> $1
+		      cat $TMP_TARGET_FILE_PATH >> $1
+		      exit
 		      ;;
     		  esac
 	done
     ;;
 
     cpp)
-        echo -e "$(cat ${CPP_HEADER_FILE_PATH})$(cat ${LINE_FILE_PATH})$(cat $1)" > "$1"
+	cat $CPP_HEADER_FILE_PATH > $1
+	cat $LINE_FILE_PATH >> $1
+	cat $TMP_TARGET_FILE_PATH >> $1
     ;;
 
     sh)
-        echo -e "$(cat ${SHELL_HEADER_FILE_PATH})$(cat ${LINE_FILE_PATH})$(cat $1)" > "$1"
+	cat $SHELL_HEADER_FILE_PATH > $1
+	cat $LINE_FILE_PATH >> $1
+	cat $TMP_TARGET_FILE_PATH >> $1
     ;;
 
     *)
@@ -75,6 +97,7 @@ else
 
 fi
 
+exit
 # =========================================================================
 
 

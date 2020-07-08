@@ -1,4 +1,4 @@
-=<file-name>
+= <file-name>
 :docfile:
 :author: <author name> <author-email>
 :docdatetime:
