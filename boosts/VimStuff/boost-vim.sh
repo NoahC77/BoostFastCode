@@ -6,8 +6,9 @@ THEME_NAMES=( "turbocpp" "Pablo" )
 
 
 
-END_VIMRC_FILE="/.vimrc"
-END_VIM_COLORS_DIR="/.vim/colors"
+END_VIMRC_FILE="$VIM/.vimrc"
+END_VIM_COLORS_DIR="$VIM/.vim/colors"
+TARGET_COLORS_FILE='/256-jungle.vim'
 THEME_ROOT_DIR="$(pwd)"
 # tdo: pATHS COULD BE SPECIFIED USING theme_names ARRAY
 THEME_DIRS=('/vim-themes/turbocpp/.vim' '/vim-themes/Pablo/.vim')
@@ -24,11 +25,13 @@ case $theme in
 
   Pablo)
     sudo cp $THEME_ROOT_DIR${THEME_RC_FILES[1]}  $END_VIMRC_FILE
-    sudo cp $THEME_ROOT_DIR${THEME_COLOR_FILES[1]} $END_VIM_COLORS_DIR
+    sudo mkdir "$END_VIM_COLORS_DIR"
+    sudo touch "$END_VIM_COLORS_DIR$TARGET_COLORS_FILE"
+    sudo cp $THEME_ROOT_DIR${THEME_COLOR_FILES[1]} "$END_VIM_COLORS_DIR/256-jungle.vim"
     ;;
 
   *)
-    echo "BFC::ERROR: INVALID SWITCH CASE IN boost-vim.sh"
+    echo 'BFC::ERROR: INVALID SWITCH CASE IN boost-vim.sh'
     exit
     ;;
 

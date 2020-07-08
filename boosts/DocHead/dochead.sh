@@ -6,9 +6,9 @@
 # File: dochead.sh
 #
 # Author: Noah Castetter
-# Version: 0
+# Version: 1
 # Created: 5-22-2020
-# Updated: 5-22-2020
+# Updated: 7-8-2020
 #
 # Description: A shell script which takes the name of a file and depending
 # on the extension of the file pastes a header format to documentation or
@@ -20,16 +20,15 @@
 
 # Input Validation & Declaring Constants
 # =========================================================================
-
+DOCHEAD_ROOT_DIR='/home/2020SummerStuff/BoostFastCode/boosts/DocHead/'
 declare -r ERR_MISSING_SOURCE="ERROR: MISSING SOURCE FILE PATH CMD ARG. Try dochead source"
 declare -r ERR_INVALID_EXTENSION="ERROR: INVALID FILE EXTENSION ON THE FIRST ARGUMENT PASSED"
-DOCHEAD_ROOT_DIR=$(pwd)
 declare -r TMP_TARGET_FILE_PATH="./tmp.txt"
-declare -r LINE_FILE_PATH="./lineFile.txt"
-declare -r SHELL_HEADER_FILE_PATH="./docheaders/shellheader.txt"
-declare -r CPP_HEADER_FILE_PATH="./docheaders/cppheader.txt"
-declare -r ADOC_DOC_HEADER="./docheaders/adoc-doc-template.txt"
-declare -r ADOC_TABLE_HEADER="./docheaders/adoc-table-template.txt"
+declare -r LINE_FILE_PATH="$DOCHEAD_ROOT_DIR/lineFile.txt"
+declare -r SHELL_HEADER_FILE_PATH="$DOCHEAD_ROOT_DIR/docheaders/shellheader.txt"
+declare -r CPP_HEADER_FILE_PATH="$DOCHEAD_ROOT_DIR/docheaders/cppheader.txt"
+declare -r ADOC_DOC_HEADER="$DOCHEAD_ROOT_DIR/docheaders/adoc-doc-template.txt"
+declare -r ADOC_TABLE_HEADER="$DOCHEAD_ROOT_DIR/docheaders/adoc-table-template.txt"
 
 sudo chmod 777 $1
 sudo chmod 777 $TMP_TARGET_FILE_PATH
@@ -45,6 +44,7 @@ else
     # Getting the extension of the filename argument
     filename=$(basename -- "$1")
     extension="${filename##*.}"
+# =========================================================================
 
     # Copying contents of file path specified in first command line argument into temp file.
     cp $1 $TMP_TARGET_FILE_PATH
@@ -97,7 +97,7 @@ else
 
 fi
 
+# Garbage Collection
+rm $TMP_TARGET_FILE_PATH
+
 exit
-# =========================================================================
-
-

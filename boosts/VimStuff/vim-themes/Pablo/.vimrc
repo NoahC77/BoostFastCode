@@ -1,6 +1,8 @@
 " Author: Noah Castetter
 " Sources: https://vi.stackexchange.com/questions/11597/how-do-i-insert-a-comment-into-my-vimrc-fie, 
 
+
+
 " netrw configirations to get NERDtree like setup
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
@@ -59,3 +61,7 @@ hi TabLine      ctermfg=245         ctermbg=239         cterm=None
 hi TabLineFill  ctermfg=239         ctermbg=239
 hi TabLineSel   ctermfg=104         ctermbg=236         cterm=Bold
 "vim: sw=4
+
+# Boost Configurations
+:set number
+:set syntax
