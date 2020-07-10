@@ -15,6 +15,7 @@
 PATH=/usr/local/bin:/usr/bin:/bin:/usr/ccs/bin:/sbin:/usr/sbin:/usr/local/openwin/bin:/usr/openwin/bin
 MANPATH=/usr/local/man:/usr/man:/usr/share/man
 
+
 export HOST=`uname -n`
 
 umask 066
@@ -112,3 +113,11 @@ if [ -n "$PS1" ] ; then
 fi 	# Finish processing interactive shell functions
 
 # $Source: /warez/home/skel/src/RCS/.bashrc,v $
+
+# BoostFastCode Aliases
+alias ls="pwd; ls -a -ltr"
+alias dochead='/home/2020SummerStuff/BoostFastCode/boosts/DocHead/dochead.sh'
+alias boost-vim='/home/2020SummerStuff/BoostFastCode/boosts/VimStuff/boost-vim.sh'
+alias boost-show='home/2020SummerStuff/BoostFastCode/boosts/VimStuff/boost-vim.sh'
+
+

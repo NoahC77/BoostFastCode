@@ -1,0 +1,6 @@
+= Windows Podman Setup Guide
+
+.Prerequisites
+*  WSL2
+** Windows Insider PRogram
+*** atleast Windows 10 build 18917

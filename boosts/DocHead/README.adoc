@@ -1,0 +1,60 @@
+= DocHead README
+:docfile: README.adoc
+:author: Noah Castetter nbc170001@utdallas.edu
+:docdatetime: 7-8-2020 11:46AM
+:description: DocHead is a utility intended to facilitate accurate, quick, and complete header for a variety of files.
+
+:toc:
+:toclevels:5
+
+== Setup
+Dochead can be installed by using *booster_shot's* install.sh or by simply adding the current working directory as the alias:
+
+[source,bash]
+....
+alias dochead=($pwd/dochead.sh)
+....
+
+== Design
+In order to *prepend* the intended header to the target file, DocHead paradoxingly *appends* the intended header to the target file. Taking a closer look: DocHead saves the target's initial contents into *TMP_TARGET_FILE_PATH*,  clears the target, and finally appends the chosen header file, new line, and initial contents into the target in that order.
+
+.Psuedo-Code
+* Save init contents into $TMP_TARGET_FILE_PATH.
+* Clear initial contents.
+* Append chosen header file to target.
+* Append new line to target.
+* Append intial contents to target.
+
+== Motivation
+DocHead is intended to increase versioning precision, save time, and motivate more complete documentation of source code..
+
+== Usage
+Header choices are dependant on the file extension of the target file. The target file is the first command line argument ( $1 ). 
+
+[source,bash]
+----
+$ pwd; ls
+/file/header/target/
+example.cpp
+$ dochead example.cpp
+----
+
+|===
+doc headers, target extension
+adoc-doc-template, adoc
+adoc-table-template, adoc
+cppheader, cpp
+shellheader, sh
+|===
+
+.TODO
+* Test dochead installation
+* Fix implementation with booster-shot
+
+
+[bibliography]
+== References
+- [[[UL]]] geekosaur. https://unix.stackexchange.com/questions/15216/bash-nested-case-syntax-and-terminators.
+- [[[LH]]] Farmida Yesmin. linuxhint.com/bash_select_command/esley.
+- [[[FD]]] How To Wiki. https://how-to.fandom.com/wiki/How_to_read_command_line_arguments_in_a_bash_script
+- [[[OSR]]] Oper Server Release. https://osr507doc.xinuos.com/en/OSTut/Appending_one_file_to_another.html#:~:text=You%20do%20this%20by%20using,%2C%20and%20press%20.
