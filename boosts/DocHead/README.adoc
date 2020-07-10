@@ -4,16 +4,21 @@
 :docdatetime: 7-8-2020 11:46AM
 :description: DocHead is a utility intended to facilitate accurate, quick, and complete header for a variety of files.
 
+:devenv: Microsoft Windows 10 Home 10.0.19041 Build 19041 Insider Program Ubuntu WSL 20.04 
+
 :toc:
 :toclevels:5
 
 == Setup
+Dochead may be cloned together with BoostFastCode currently. Currently development primarily being done on Ubuntu WSL 20.04 using Windows Insider Program
 Dochead can be installed by using *booster_shot's* install.sh or by simply adding the current working directory as the alias:
 
 [source,bash]
 ....
 alias dochead=($pwd/dochead.sh)
 ....
+
+To setup dochead using *booster_shot's* install .sh, navigate to ../booster-shot/ _(location relative to Dochead/)_  and append the fol
 
 == Design
 In order to *prepend* the intended header to the target file, DocHead paradoxingly *appends* the intended header to the target file. Taking a closer look: DocHead saves the target's initial contents into *TMP_TARGET_FILE_PATH*,  clears the target, and finally appends the chosen header file, new line, and initial contents into the target in that order.

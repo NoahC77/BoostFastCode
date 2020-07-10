@@ -69,23 +69,34 @@ sudo apt update
 sudo apt install default-jre
 ....
 
-////
-Example Source Code Block with Title and Sytax Highlighting
-////
-.app.rb
-[source,ruby]
-----
-require 'sinatra'
 
-get '/hi' do
-  "Hello World!"
-end
-----
+== Code Block Command Inventory and Further Explanation
 
 ////
-A template bib:
+Table from CSV data
 ////
-_The Pragmatic Programmer_ <<pp>> should be required readin for all developers. To learn all about design patterns, refer to the book by the "'Gang of Four'" <<gof>>.
+.Oracle Java Install from Webupd8 PPA Command Inventory
+|===
+Command,Effect
+$ sudo apt update, Good for your health!
+$ sudo add-apt-repository ppa:webupd8team/java,  Add Prereq
+$ sudo apt install oracle-java14-installer, Install latest version (currently java14)
+$ sudo apt install oracle-java14-set-default, Set java version as default
+|===
+
+.Install OpenJDK Command Inventory
+|===
+Command,Effect
+$ sudo apt install default-jdk, Install jdk set as default
+$ sudo apt install openjdk-8-jdk, Install specific version (this case is openjdk-8-jdk)
+|===
+
+.Install Java RE Command Inventory
+|===
+Command,Effect
+$sudo apt install default-jtr, Install the jre set as default
+|===
+
 
 [bibliography]
 == References
@@ -94,8 +105,3 @@ _The Pragmatic Programmer_ <<pp>> should be required readin for all developers. 
 - [[[JDK]]] jdk.java.net.
 - [[[OJDK]]] OpenJDK. https://openjdk.java.net/install/
 - [[[NAP]]] phoenixNAP. https://phoenixnap.com/kb/how-to-install-java-ubuntu
-
-- [[[gof,2]]] Erich Gamma, Richard Helm, Ralph Jognson & Jogn Vlissides. Design Patters: Elements of Reusable Object-Oriented Software. Addison-Weslet. 1994
-
-
-

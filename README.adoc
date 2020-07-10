@@ -1,11 +1,23 @@
-= DesignDoc
-:docfile: DesignDoc.adoc
+= BoostFastCode
+:docfile: README.adoc
 :author: Noah Castetter noahcastetter@gmail.com
 :docdatetime: 7-10-2020
-:description: The Design Document for boost-taxes.sh, a shell script to be implemented within BoostFastCode. boost-taxes.sh is motivated to to promote fiscal independance and prosperity with minimal pain, by automatically generating documents needed for taxes and adult stuff.
+:description:
 
 :toc:
 :toclevels:5
+
+== Getting Started
+
+=== Prerequisites
+
+=== Installing
+
+= Running Tests
+
+= Deployment
+
+==
 
 ////
 Example Source Code Block with Title and Sytax Highlighting
@@ -31,6 +43,5 @@ _The Pragmatic Programmer_ <<pp>> should be required readin for all developers. 
 - [[[pp]]] Andy Hunt & Dave Thomas. The Pragmatic Programmer:
 From Journetman to Master. Addison-Wesley. 1999.
 - [[[gof,2]]] Erich Gamma, Richard Helm, Ralph Jognson & Jogn Vlissides. Design Patters: Elements of Reusable Object-Oriented Software. Addison-Weslet. 1994
-
 
 
