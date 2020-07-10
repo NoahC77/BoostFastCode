@@ -1,0 +1,101 @@
+= DesignDoc
+:docfile: DesignDoc.adoc
+:author: Noah Castetter noahcastetter@gmail.com
+:docdatetime: 7-10-2020
+:description: The Design Document for boost-taxes.sh, a shell script to be implemented within BoostFastCode. boost-taxes.sh is motivated to to promote fiscal independance and prosperity with minimal pain, by automatically generating documents needed for taxes and adult stuff.
+
+:toc:
+:toclevels:5
+
+.Prerequisites
+* jdk.java.net/14/[JDK 14]
+* OpenJDK 11
+* *Starting weith version 4, PDFsame Basic is distributed including simplified version of OpenJDK 11*
+
+== Initial Research
+
+== https://phoenixnap.com/kb/how-to-install-java-ubuntu[Installing Java on Ubuntu]
+
+.Prereq
+* User Account with sudo
+* CLI Access
+* apt-get command
+
+.4 Java Versions
+* Java Standard Edition (Java SE)
+* Java Micro Edition (Java EE)
+* Java Enterprise Edition (Java EE)
+* JavaFX
+
+This section installs *Java Development Kit (OpenJDK and Java Runtime Environment (Open JRE).* JRE is for running Java-based applications, while JDK is for developing and programming with Java.
+
+[source,bash]
+....
+
+# Download Oracle Java from Webupd8 PPA
+
+# Add required package repo 
+$ sudo add-apt-repository ppa:webupd8team/java
+
+# Update system before install
+$ sudo apt update
+
+# Install latest LTS version (currently java14)
+$ sudo apt install oracle-java14-installer
+
+# Optionally, set this Java version as the default
+$ sudo apt install oracle-java14-set-default
+
+# Verify Java Installation
+$ java -version
+
+# Install OpenJDK
+$ sudo apt update
+
+# Install Java Development Kit
+$ sudo apt install default-jdk
+
+# To install Specific Version of OpenJDK
+sudo apt install openjdk-8-jdk
+
+# Verify Java Installation
+
+
+
+# Update Repository
+sudo apt update
+
+# Install Java RE
+sudo apt install default-jre
+....
+
+////
+Example Source Code Block with Title and Sytax Highlighting
+////
+.app.rb
+[source,ruby]
+----
+require 'sinatra'
+
+get '/hi' do
+  "Hello World!"
+end
+----
+
+////
+A template bib:
+////
+_The Pragmatic Programmer_ <<pp>> should be required readin for all developers. To learn all about design patterns, refer to the book by the "'Gang of Four'" <<gof>>.
+
+[bibliography]
+== References
+
+- [[[PDFSAM]]] Sober Lemur S.a.s. 2017-2020 https://pdfsam.org/run-on-linux-with-openjdk/
+- [[[JDK]]] jdk.java.net.
+- [[[OJDK]]] OpenJDK. https://openjdk.java.net/install/
+- [[[NAP]]] phoenixNAP. https://phoenixnap.com/kb/how-to-install-java-ubuntu
+
+- [[[gof,2]]] Erich Gamma, Richard Helm, Ralph Jognson & Jogn Vlissides. Design Patters: Elements of Reusable Object-Oriented Software. Addison-Weslet. 1994
+
+
+
