@@ -1,0 +1,38 @@
+= Design Doc
+:docfile: README.adoc
+:author: Noah Castetter nbc170001@utdallas.edu
+:docdatetime: 7-9-2020
+:description: A document describing the design and research which goes into the development of TheMathematics.sh
+
+:toc:
+:toclevels:5
+
+== Initial Research
+
+
+////
+Example Source Code Block with Title and Sytax Highlighting
+////
+.app.rb
+[source,ruby]
+----
+require 'sinatra'
+
+get '/hi' do
+  "Hello World!"
+end
+----
+
+////
+A template bib:
+////
+_The Pragmatic Programmer_ <<pp>> should be required readin for all developers. To learn all about design patterns, refer to the book by the "'Gang of Four'" <<gof>>.
+
+[bibliography]
+== References
+
+- [[[pp]]] Andy Hunt & Dave Thomas. The Pragmatic Programmer:
+From Journetman to Master. Addison-Wesley. 1999.
+- [[[gof,2]]] Erich Gamma, Richard Helm, Ralph Jognson & Jogn Vlissides. Design Patters: Elements of Reusable Object-Oriented Software. Addison-Weslet. 1994
+
+

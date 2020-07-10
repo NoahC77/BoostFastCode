@@ -78,6 +78,12 @@ else
 	done
     ;;
 
+    tex)
+	cat $TEX_RESUME_TEMPLATE_FILE_PATH > $1
+	cat $LINE_FILE_PATH >> $1
+	cat $TMP_TARGET_FILE_PATH >> $1
+    ;;
+
     cpp)
 	cat $CPP_HEADER_FILE_PATH > $1
 	cat $LINE_FILE_PATH >> $1

@@ -118,5 +118,6 @@ fi 	# Finish processing interactive shell functions
 alias ls="pwd; ls -a -ltr"
 alias dochead='/home/2020SummerStuff/BoostFastCode/boosts/DocHead/dochead.sh'
 alias boost-vim='/home/2020SummerStuff/BoostFastCode/boosts/VimStuff/boost-vim.sh'
+alias boost-show='home/2020SummerStuff/BoostFastCode/boosts/VimStuff/boost-vim.sh'
 
 
