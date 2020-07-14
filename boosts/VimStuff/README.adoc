@@ -1,2 +1,51 @@
-.sources
-https://github.com/barbw1re/bash-menu
+= Vim Stuff README
+:docfile: README.adoc
+:author: Noah Castetter noahcastetter@gmail.com
+:docdatetime: 7-14-2020
+:lastedit: 7-14-2020
+:description: A README to provide relevant information regarding installation, motivation, usage, and todos.
+
+:toc:
+:toclevels:5
+
+== Setup
+
+== Design
+
+== Motivation
+boost-vim.sh is motivated to accelerate expansion of the user's power and influence when using vim. Mostly designed for personal use.
+
+== Usage
+The following vim themes are included in VimStuff/vim-themes/:
+
+.Included Vim Themes
+* turbocpp <<BOR>>
+* Pablo
+
+.TODO
+
+////
+Example Source Code Block with Title and Sytax Highlighting
+////
+.app.rb
+[source,ruby]
+----
+require 'sinatra'
+
+get '/hi' do
+  "Hello World!"
+end
+----
+
+////
+A template bib:
+////
+_The Pragmatic Programmer_ <<pp>> should be required readin for all developers. To learn all about design patterns, refer to the book by the "'Gang of Four'" <<gof>>.
+
+[bibliography]
+== References
+- [[[BOR]]] borlanp. caglartoklu https://github.com/caglartoklu/borlandp.vim
+
+- [[[MENU]]] bash manu. barbq1re. https://github.com/barbw1re/bash-menu
+
+
