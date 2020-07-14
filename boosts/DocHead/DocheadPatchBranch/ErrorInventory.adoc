@@ -1,0 +1,22 @@
+= Error Inventory
+:docfile: ErrorInventory.adoc
+:author: Noah Castetter noahcastetter@gmail.com
+:docdatetime: 7-14-2020
+:lastedit: 7-14-2020
+:description: A document designed to recognize and document as many errors as possible present in the dochead command.
+
+:toc:
+:toclevels:5
+
+
+
+////
+Table from CSV data
+////
+== Dochead Empty Target File Errors as of 7-14-2020
+|===
+Behavior,Reproduce,Resolved,Solution
+tmp.txt isn't deleted, dochead <any-valid-file>, *RESOLVED*, Add garb_coll function to dochead.sh
+chmod cannot access './tmp.txt': No such file or directory, dochead <file-name>.cpp, *RESOLVED*, Add touch tmp file to dochead.sh
+blank response gets stuck on a '+ cat' when ran in debug, dochead <file-name>.tex, 'RESOLVED', Add tex-resume-template.txt path to dochead.sh
+|===
