@@ -1,36 +1,40 @@
 = BoostFastCode
 :docfile: README.adoc
 :author: Noah Castetter noahcastetter@gmail.com
-:docdatetime: 7-10-2020
+:docdatetime: 7-14-2020
 :description:
 
 :toc:
 :toclevels:5
 
 == Getting Started
+Clone this repo through ssh or https, whatever works. Versioning is done through Noah Castetter's private github repository as of 7-14-2020. Furthermore all versions of BoostFastCode have only been tested on Windows 10 WSL 2 Ubuntu 20.04. Use branches conheritently and keep things neat.
 
-=== Prerequisites
+.Prerequisite rw Access to:
+* A Shell
+* The bashrc
+* The vimrc
 
 === Installing
+Run the *BoostFastCode/booster-shot/Install.sh* file as follows:
+
+Install.sh is located in 
+
+.app.bash
+[source,bash]
+----
+1 $ pwd
+2 .../BoostFastCode/booster-shot
+3 $ Install.sh
+----
+
+For details regarding what exactly Install.sh does *see Install.sh's source.*
 
 = Running Tests
 
 = Deployment
 
 ==
-
-////
-Example Source Code Block with Title and Sytax Highlighting
-////
-.app.rb
-[source,ruby]
-----
-require 'sinatra'
-
-get '/hi' do
-  "Hello World!"
-end
-----
 
 ////
 A template bib:
