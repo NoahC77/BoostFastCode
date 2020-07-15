@@ -116,9 +116,7 @@ fi 	# Finish processing interactive shell functions
 
 # BoostFastCode Aliases
 alias ls="pwd; ls -a -ltr"
-alias booster-shot='/home/2020SummerStuff/BoostFastCode/booster-shot/Install.sh'
 alias dochead='/home/2020SummerStuff/BoostFastCode/boosts/DocHead/dochead.sh'
 alias boost-vim='/home/2020SummerStuff/BoostFastCode/boosts/VimStuff/boost-vim.sh'
-alias boost-show='home/2020SummerStuff/BoostFastCode/boosts/VimStuff/boost-vim.sh'
 
 
