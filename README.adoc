@@ -17,7 +17,7 @@ WARNING:: As *Install.sh* edits the user's .bashrc and it's bebehavior is only k
 
 Being a private git repo, setup complications related to receiving permission from your remote github account when pushing to remote origin should be expected. *To download BoostFastCode for pure usage and no plans to write back to the remote repository a browser .zip download should be considered.* For the git literate contribute as you feel inspired. 
 
-Once the remote origin is cloned, navigate to:
+Once the remote origin is cloned, navigate to: BoostFastCode/booster-shot/shell-history/Install.sh
 
 //TODO:: put screen shot of Boost/FastCode/booster-shot/Install.sh
 
@@ -49,6 +49,7 @@ The following boosts are fairly stable.
 
 
 _ordered in descending usability_
+
 .BoostFastCode offered boosts
 * Dochead
 * VimStuff
@@ -57,29 +58,3 @@ _ordered in descending usability_
 // TODO:: 
 
 WARNING: ASSUME ALL BOOSTS LOCATED IN A BOOST DIR IN BoostFastCode/boosts/ NOT LISTED IN THE FOLLOWING ARE UNSTABLE.
-////
-Example Source Code Block with Title and Sytax Highlighting
-////
-.app.rb
-[source,ruby]
-----
-require 'sinatra'
-
-get '/hi' do
-  "Hello World!"
-end
-----
-
-////
-A template bib:
-////
-_The Pragmatic Programmer_ <<pp>> should be required readin for all developers. To learn all about design patterns, refer to the book by the "'Gang of Four'" <<gof>>.
-
-[bibliography]
-== References
-
-- [[[pp]]] Andy Hunt & Dave Thomas. The Pragmatic Programmer:
-From Journetman to Master. Addison-Wesley. 1999.
-- [[[gof,2]]] Erich Gamma, Richard Helm, Ralph Jognson & Jogn Vlissides. Design Patters: Elements of Reusable Object-Oriented Software. Addison-Weslet. 1994
-
-
