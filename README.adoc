@@ -1,0 +1,85 @@
+= BoostFastCode README
+:docfile: BoostFastCode/README.adoc
+:docdatetime: 7-17-2020
+:lastedit: 7-17-2020
+:description: A solicitation for collaboration and usage of BoostFastCode. Designed to accelerate production, BoostFastCode offerse a set of *production enhancing utilities located in BoostFastCode/boosts.*
+
+:toc:
+:toclevels:5
+
+// TODO:: Properly connect assets to this document 7-17-2020.
+
+== Motivation
+*BoostFastCode is motivated to increase a contributor's data producing capabilities through automating the collection or production of routine data.* Proper citation of sources utilized in the design, production, and usage of this code is very influencial in judging code as the existence of BoostFastCode generally promotes the open source philosphy.
+
+== Setup
+WARNING:: As *Install.sh* edits the user's .bashrc and it's bebehavior is only known on WSL 2 Ubuntu 20.04, prospective contributers should thoroughly consider understanding features prior to utilizing them *for their own safety.*
+
+Being a private git repo, setup complications related to receiving permission from your remote github account when pushing to remote origin should be expected. *To download BoostFastCode for pure usage and no plans to write back to the remote repository a browser .zip download should be considered.* For the git literate contribute as you feel inspired. 
+
+Once the remote origin is cloned, navigate to:
+
+//TODO:: put screen shot of Boost/FastCode/booster-shot/Install.sh
+
+image::BoostFastCodeFileStructure.PNG
+
+// TODO:: Setup hyperlinks to 'BoostFastCode/booster-shot/Install.sh' to the name 'Install.sh'
+
+WARNING:: Avoiding inflation of time spent debugging the setup, ensure all files used by the Install.sh script have sufficient read write permissions.
+
+.Install.sh Permission Dependancies
+* BoostFastCode subdirectories
+* User basrc file
+
+Determine the location of BoostFastCode's dependancies in Install.sh's local variables.
+
+== Design
+Boosts are organized into directories located in BoostFastCode/boosts/<boost-dir-name>. Boost infrastructure isn't universal, however the common design behind each boost is similar to the *DocHead Boost:*
+
+// TODO:: Get a good picture of the file strucutre of the DocHead boost.sh
+.DocHead/
+* README.adoc
+* dochead.sh
+* <some weird misc files>
+* *docheaders/*
+
+INFO:: Organize large sets of boost local redundant data like assets/ into subdirectories of their respective boost. 
+
+The following boosts are fairly stable. 
+
+
+_ordered in descending usability_
+.BoostFastCode offered boosts
+* Dochead
+* VimStuff
+* TheMathematics
+
+// TODO:: 
+
+WARNING: ASSUME ALL BOOSTS LOCATED IN A BOOST DIR IN BoostFastCode/boosts/ NOT LISTED IN THE FOLLOWING ARE UNSTABLE.
+////
+Example Source Code Block with Title and Sytax Highlighting
+////
+.app.rb
+[source,ruby]
+----
+require 'sinatra'
+
+get '/hi' do
+  "Hello World!"
+end
+----
+
+////
+A template bib:
+////
+_The Pragmatic Programmer_ <<pp>> should be required readin for all developers. To learn all about design patterns, refer to the book by the "'Gang of Four'" <<gof>>.
+
+[bibliography]
+== References
+
+- [[[pp]]] Andy Hunt & Dave Thomas. The Pragmatic Programmer:
+From Journetman to Master. Addison-Wesley. 1999.
+- [[[gof,2]]] Erich Gamma, Richard Helm, Ralph Jognson & Jogn Vlissides. Design Patters: Elements of Reusable Object-Oriented Software. Addison-Weslet. 1994
+
+
