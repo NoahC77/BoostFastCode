@@ -2,11 +2,11 @@
 :docfile: BoostFastCode/boosts/DocHead/README.adoc
 :author: Noah Castetter nbc170001@utdallas.edu
 :docdatetime: 7-8-2020 11:46AM
-:lastedit: 7-17-2020 1:45PM
-:description: DocHead is a utility intended to facilitate accurate, quick, and complete header for a variety of files.
-
+:lastedit: 7-23-2020 4:00PM
 :toc:
 :toclevels:5
+:description: DocHead is a utility intended to facilitate accurate, quick, and complete header for a variety of files.
+
 
 == Setup
 Dochead can be installed by using *booster_shot's* install.sh or by simply adding the current working directory as the alias:

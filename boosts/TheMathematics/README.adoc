@@ -2,10 +2,11 @@
 :docfile: README.adoc
 :author: Noah Castetter nbc170001@utdallas.edu
 :docdatetime: 7-9-2020
-:description: A document describing the design and research which goes into the development of TheMathematics.sh
-
+:lastedit: 7-23-2020
 :toc:
 :toclevels:5
+:description: A document describing the design and research which goes into the development of TheMathematics.sh
+
 
 == Initial Research
 

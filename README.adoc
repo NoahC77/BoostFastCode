@@ -2,10 +2,11 @@
 :docfile: BoostFastCode/README.adoc
 :docdatetime: 7-17-2020
 :lastedit: 7-17-2020
+:toc:
+:toclevels: 4
+:toc-title: Table of Contents
 :description: A solicitation for collaboration and usage of BoostFastCode. Designed to accelerate production, BoostFastCode offerse a set of *production enhancing utilities located in BoostFastCode/boosts.*
 
-:toc:
-:toclevels:5
 
 // TODO:: Properly connect assets to this document 7-17-2020.
 
