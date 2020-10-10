@@ -4,7 +4,7 @@
 :docdatetime: 7-9-2020
 :lastedit: 7-23-2020
 :toc:
-:toclevels:5
+:toclevels: 5
 :description: A document describing the design and research which goes into the development of TheMathematics.sh
 
 

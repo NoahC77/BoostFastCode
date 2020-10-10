@@ -21,6 +21,25 @@ end
 ----
 
 ////
+A template glossary:
+////
+[horizontal]
+.Labeled horizontal
+Term 1:: Definition 1
+[horizontal]
+	Term 2.1;;
+		Definition 2.1
+	Term 2.2;;
+		Defintion 2.2
+
+////
+Example icons
+////
+TIP: Tip.
+IMPORTANT: Important.
+WARNING: Warning.
+CAUTION: Caution.
+
 A template bib:
 ////
 _The Pragmatic Programmer_ <<pp>> should be required readin for all developers. To learn all about design patterns, refer to the book by the "'Gang of Four'" <<gof>>.
